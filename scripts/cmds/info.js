@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
 	config: {
-		name: "owner",
+		name: "info",
 		author: "Rifad",
 		role: 0,
 		shortDescription: "info and my owner the cmd",
@@ -16,16 +16,16 @@ module.exports = {
 	onStart: async function ({ api, event }) {
 		try {
 			const ownerInfo = {
-				name: '𝐌𝐑 𝐍𝐎𝐁𝐈𝐓𝐀 𝐕𝐀𝐈',
-				gender: '𝐌𝐚𝐥𝐞',
+				name: '𝗠𝗥 𝗥𝗶𝗺𝗼𝗻',
+				gender: '𝗠𝗮𝗹𝗲',
 				age: '18+',
-				Home : '𝐃𝐢𝐧𝐚𝐣𝐩𝐮𝐫',
-				Number : '01881391819',
-				WhatsApp : '01881391819',
-				Email : '𝐫𝐢𝐦𝐨𝐧2454𝐚@𝐠𝐦𝐚𝐢𝐥.𝐜𝐨𝐦'‚
+				instagram: '𝐈𝐭𝐳._.𝗥𝗶𝗺𝗼𝗻',
+				Relationship: '𝐒𝐢𝐧𝐠𝐥𝐞',
+				religion: '𝐈𝐬𝐥𝐚𝐦',
+				facebook: 'https://www.facebook.com/profile.php?id=61552209843370'
+			};
 
-
-			const bold = 'http://g-v1.onrender.com/uYRKJKfeV.jpg';
+			const bold = 'https://i.imgur.com/M1A7MQO.jpeg';
 			const tmpFolderPath = path.join(__dirname, 'tmp');
 
 			if (!fs.existsSync(tmpFolderPath)) {
@@ -39,12 +39,12 @@ module.exports = {
 
 			const response = `╭─────❁\n│  𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢  \n│
 │𝐍𝐚𝐦𝐞: ${ownerInfo.name}
-│𝐆𝐞𝐧𝐝𝐞𝐫: ${ownerInfo.gender}
-│𝐀𝐠𝐞: ${ownerInfo.age}
-│𝐇𝐎𝐌𝐄: ${ownerInfo.home}
-│𝐍𝐮𝐦𝐛𝐞𝐫: ${ownerInfo.number}
-│𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩: ${ownerInfo.whatsapp}
-│𝐄𝐦𝐚𝐢𝐥: ${ownerInfo.email}\n╰────────────❁`;
+│𝐆𝐞𝐧𝐝𝐞𝐫 : ${ownerInfo.gender}
+│𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧𝐬𝐡𝐢𝐩 :${ownerInfo.Relationship}
+│𝐀𝐠𝐞 :${ownerInfo.age}
+│𝐑𝐞𝐥𝐢𝐠𝐢𝐨𝐧: ${ownerInfo.religion}
+│𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦 : ${ownerInfo.instagram}
+│𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤: ${ownerInfo.facebook}\n╰────────────❁`;
 
 			await api.sendMessage({
 				body: response,
